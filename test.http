@@ -1,0 +1,27 @@
+GET http://localhost:3000/error
+
+###
+GET http://localhost:3000/person/cuong
+
+### Get person by query string
+GET http://localhost:3000/person?name=cuong&age=35
+
+###
+POST http://localhost:3000/product HTTP/1.1
+content-type: application/json
+
+{
+    "name": "pijama clone",
+    "quantity": 100,
+    "specific": {
+        "height": 100,
+        "width": 50
+    },
+    "manufacture": {
+        "cut": "unknown",
+        "assembly": "vietnam"
+    }
+}
+
+###
+GET http://localhost:3000/product HTTP/1.1
